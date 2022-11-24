@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react'
 import HomeStyle from '../../styles/Home.module.css'
+
 import { FaCheck, FaPencilAlt, FaTrashAlt } from 'react-icons/fa'
 import { IoCloseSharp } from 'react-icons/io5'
+
 function ListItem(props) {
-    const itemToBeUpdated = useRef(null);
-    const focusInput = useRef(null);
     const [isHovered, setIsHovered] = useState(false);
     const [isClick, setClicked] = useState(true);
 
@@ -43,8 +43,8 @@ function ListItem(props) {
                             <input
                                 type="text"
                                 onChange={handleChange}
-                                autoFocus value={inputValue}
-                                ref={focusInput}
+                                autoFocus
+                                value={inputValue}
                             />
                             <span className={HomeStyle.listButtons}>
                                 <FaCheck />
