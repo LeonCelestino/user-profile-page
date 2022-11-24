@@ -1,0 +1,88 @@
+.login {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+.login .container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.login .container div {
+    width: 50%;
+    height: 100%;
+    background: #242426;
+}
+
+.login .container div:first-child {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.login label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #FFFFF1;
+
+    margin-bottom: 1rem;
+}
+
+.login input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFFFF1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.login input[type="text"]:focus {
+    outline: none;
+}
+
+.login a {
+    width: 12rem;
+    padding: 0.6rem;
+    margin-top: 3rem;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #FFFFF1;
+    background-color: #C97BA2;
+}
+
+.login .container div:last-child {
+    background: linear-gradient(280deg, #000 2%, transparent), url(../images/bg.webp) no-repeat;
+    background-position: right center;
+    background-size: cover;
+
+    position: relative;
+}
+
+
+
+.login .container div:last-child h1,
+.login .container div:last-child p {
+    position: relative;
+    z-index: 2;
+}
