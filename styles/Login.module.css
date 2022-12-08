@@ -11,18 +11,26 @@
     width: 100%;
 }
 
-.login .container div {
+.login .container>div {
     width: 50%;
     height: 100%;
     background: #242426;
 }
 
-.login .container div:first-child {
+.login .container>div:first-child {
     width: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.login .container>div:last-child {
+    background: linear-gradient(280deg, #000 2%, transparent), url(../images/bg.webp) no-repeat;
+    background-position: right center;
+    background-size: cover;
+
+    position: relative;
 }
 
 .login form {
@@ -56,11 +64,25 @@
     outline: none;
 }
 
-.login a {
+.login .signinup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    margin-top: 3rem;
+}
+
+.login .signinup p {
+    flex: 1.5;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.login .signin {
     width: 12rem;
     padding: 0.6rem;
-    margin-top: 3rem;
-
+    flex: 1;
     font-size: 1.6rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -71,18 +93,60 @@
     background-color: #C97BA2;
 }
 
-.login .container div:last-child {
-    background: linear-gradient(280deg, #000 2%, transparent), url(../images/bg.webp) no-repeat;
-    background-position: right center;
-    background-size: cover;
+.login .container .signup {
+    color: #C97BA2;
+    font-size: 1.3rem;
 
-    position: relative;
 }
 
+/* Register */
+
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.registerForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1em;
+    width: clamp(30em, 30vw, 70em);
+    height: clamp(40em, 60vh, 70em);
+    padding: 3vmin 10vmin;
+    border-radius: 15px;
+
+    background-color: #171718;
 
 
-.login .container div:last-child h1,
-.login .container div:last-child p {
-    position: relative;
-    z-index: 2;
+
+}
+
+.registerForm label {
+    font-size: clamp(0.8rem, 2.5vmin, 3rem);
+}
+
+.registerForm input {
+    border: none;
+    padding: 0.8vmin 2vmin;
+}
+
+.registerForm input:focus {
+    outline: none;
+}
+
+.registerForm button {
+    padding: 1vmin;
+    margin-top: 3rem;
+}
+
+.registerForm h5 {
+    font-size: clamp(0.6rem, 1.5vmin, 2rem);
+}
+
+.registerForm h5::first-letter {
+    text-transform: capitalize;
 }
